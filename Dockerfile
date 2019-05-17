@@ -8,6 +8,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     yum clean all && \
     yum makecache && \
     yum -y update && \
+    yum install -y wget && \
     wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz -o /tmp/Python-3.7.3.tgz && \
     tar -zxvf /tmp/Python-3.7.3.tgz -C /tmp && \
     cd /usr/bin && mv python python2_backup && \
