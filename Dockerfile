@@ -18,4 +18,5 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     make && make install && \
     ln -s /usr/local/python/python3/bin/python3 /usr/bin/python && \
     sed -i '/\/usr\/bin\/python/\/usr\/bin\/python2.7/' /usr/bin/yum && \
+    rm -rf /tmp/Python-3.7.3* && \
     python -v
