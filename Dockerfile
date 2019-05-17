@@ -9,8 +9,8 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     yum makecache && \
     yum -y update && \
     yum install -y wget && \
-    wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz -o /tmp/Python-3.7.3.tgz && \
-    tar -zxvf /tmp/Python-3.7.3.tgz -C /tmp && \
+    wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz -o /tmp/Python-3.7.3.tgz && \
+    tar -Jxvf /tmp/Python-3.7.3.tgz -C /tmp && \
     cd /usr/bin && mv python python2_backup && \
     yum -y install gcc automake autoconf libtool make zlib zlib-devel && \
     cd /tmp/Python-3.7.3 && \
