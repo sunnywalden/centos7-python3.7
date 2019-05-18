@@ -37,6 +37,8 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     rm -rf /usr/bin/python && rm -rf /usr/bin/pip && \
     ln -s /usr/local/python3/bin/python3 /usr/bin/python && \
     ln -s /usr/local/python3/bin/pip3 /usr/bin/pip && \
+    sed -i 's/\/usr\/bin\/python/\/usr\/bin\/python2.7/g' /usr/bin/yum-config-manager && \
+    sed -i 's/\/usr\/bin\/python/\/usr\/bin\/python2.7/g' /usr/libexec/urlgrabber-ext-down && \
     sed -i 's/\/usr\/bin\/python/\/usr\/bin\/python2.7/g' /usr/bin/yum && \
     cd .. && rm -rf Python-3.7.3* && \
 #    pip3 install --upgrade pip && \
