@@ -13,8 +13,8 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     yum makecache && \
     yum -y update && \
     yum install -y wget && \
-    #wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz && \
-    #tar -zxf OpenSSL_1_1_1b.tar.gz && \
+    wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz && \
+    tar -zxf OpenSSL_1_1_1b.tar.gz && \
     yum -y install gcc automake autoconf libtool make zlib zlib-devel  libffi-devel mariadb-devel && \
     #yum -y install perl-core && \
     cd openssl-OpenSSL_1_1_1b && \
@@ -29,8 +29,8 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
     echo '/usr/local/openssl/lib' > /etc/ld.so.conf.d/openssl-1.1.1b.conf && \
     ldconfig -v && \
     cd .. && rm -rf *OpenSSL_1_1_1b* && \
-    #wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz && \
-    #tar -Jxf Python-3.7.3.tar.xz && \
+    wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz && \
+    tar -Jxf Python-3.7.3.tar.xz && \
     cd Python-3.7.3 && \
     ./configure --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl && \
     make && make install && \
