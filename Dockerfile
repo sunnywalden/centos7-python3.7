@@ -4,9 +4,9 @@ MAINTAINER sunnywalden@gmail.com
 
 USER root
 
-ADD Python-3.7.3.tar.xz ./
-#
-ADD OpenSSL_1_1_1b.tar.gz ./
+#ADD Python-3.7.3.tar.xz ./
+
+#ADD OpenSSL_1_1_1b.tar.gz ./
 
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum clean all && \
