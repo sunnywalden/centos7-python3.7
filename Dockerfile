@@ -5,7 +5,7 @@ MAINTAINER sunnywalden@gmail.com
 USER root
 
 ENV PYTHON_VERSION=3.7.5 \
-    SSL_VERSION=1_1_1b
+    SSL_VERSION=1_1_1d
 
 RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup && \
     wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
