@@ -34,4 +34,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: true
-        tags: sunnywalden/centos-python:${{ github.ref_name }}
+        tags: sunnywalden/centos:python-${{ github.ref_name }}
