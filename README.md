@@ -1,3 +1,3 @@
-# Python 3.7 docker image
+# Python 3 docker image based on Centos
 
-Python 3.7 docker image base on centos 7.6
+Python 3.12 docker image base on centos 7.6
