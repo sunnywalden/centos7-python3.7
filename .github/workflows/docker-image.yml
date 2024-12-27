@@ -4,7 +4,7 @@ name: Build and Push Docker Image
 on:
   push:
     tags:
-      - '*'
+      - '3.*'
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     steps:
     # 检出代码库
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     # 设置 Docker Buildx
     - name: Set up Docker Buildx
@@ -34,5 +34,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: true
-        tags: |
-          sunnywalden/centos-python:${{ github.ref_name }}-alpine
+        tags: sunnywalden/centos-python:${{ github.ref_name }}
