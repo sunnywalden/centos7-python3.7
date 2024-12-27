@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 
 MAINTAINER sunnywalden@gmail.com
 
@@ -8,9 +8,9 @@ ENV PYTHON_VERSION=3.12.4 \
     SSL_VERSION=1_1_1d
 
 RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup && \
-    wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
+    curl -s -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
     yum -y install epel-release && \
-    wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+    curl -s -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
     
 RUN yum install -y wget && \
     wget https://github.com/openssl/openssl/archive/OpenSSL_${SSL_VERSION}.tar.gz && \
