@@ -1,10 +1,10 @@
-FROM centos
+FROM centos:7
 
 MAINTAINER sunnywalden@gmail.com
 
 USER root
 
-ENV PYTHON_VERSION=3.7.5 \
+ENV PYTHON_VERSION=3.12.4 \
     SSL_VERSION=1_1_1d
 
 RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup && \
